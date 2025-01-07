@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/boot
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 30000
+
+  batch:
+    job:
+      enabled: true
+    jdbc:
+      initialize-schema: always   # Ensure batch schema is initialized if not already present
+logging:
+  level:
+    root: DEBUG
+
+
